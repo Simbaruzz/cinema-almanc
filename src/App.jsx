@@ -283,7 +283,7 @@ export default function App(){
                   const isH=has&&hl.fi.has(f.id);
                   return(
                     <div key={f.id} style={{display:"flex",alignItems:"center",gap:4,justifyContent:"flex-end",transition:"opacity .4s",opacity:isH?.9:.04,paddingRight:8,minHeight:0,flex:isH?"none":"0 0 2px"}}>
-                      {isH&&<span style={{fontSize:9,fontWeight:700,whiteSpace:"nowrap",color:"#fff"}}>{f.title}</span>}
+                      {isH&&<span style={{fontSize:FS,fontWeight:700,whiteSpace:"nowrap",color:"#fff"}}>{f.title}</span>}
                       <div style={{width:22,height:2,background:isH?"#fff":"#555",borderRadius:1,flexShrink:0}}/>
                     </div>
                   );
@@ -311,7 +311,7 @@ export default function App(){
                       if(isActive){exitSnap(f);}
                       else{setActiveFilm(f);setHf(null);setTimeout(()=>{const el=document.getElementById(`f-${f.id}`);el&&el.scrollIntoView({behavior:"smooth",block:"start"})},50);}
                     }}>
-                    {isH&&<span style={{fontSize:9,fontWeight:700,whiteSpace:"nowrap",color:isActive?OC:"#fff",overflow:"hidden",textOverflow:"ellipsis",textDecoration:isBarHover&&!isActive?"underline":"none",textUnderlineOffset:2}}>
+                    {isH&&<span style={{fontSize:FS,fontWeight:700,whiteSpace:"nowrap",color:isActive?OC:"#fff",overflow:"hidden",textOverflow:"ellipsis",textDecoration:isBarHover&&!isActive?"underline":"none",textUnderlineOffset:2}}>
                       {f.title}{isActive&&<span style={{opacity:.5,fontWeight:300,color:OC}}> ×</span>}
                     </span>}
                     <div style={{width:22,height:2,background:isH?"#fff":"#555",borderRadius:1,flexShrink:0}}/>
